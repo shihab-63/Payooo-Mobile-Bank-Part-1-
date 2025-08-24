@@ -24,7 +24,7 @@ document
       return alert("Please Select Bank");
     }
 
-    if (bankAccontNumber.length < 11) {
+    if (bankAccontNumber.length !== 11) {
       return alert("Please provite vaild account number");
     }
     if (pinNumberAdd !== pin) {
@@ -62,14 +62,25 @@ document.getElementById('cash-out-btn').addEventListener('click', function () {
 // WithDrow Section
 document.getElementById('btn-withdrow-money').addEventListener('click',function (e) {
     e.preventDefault();
+    const agentNumber = document.getElementById('agent-number').value;
+    
     const amount = document.getElementById('amount-number');
     const intAmount = parseInt(amount.value);
 
     const availableBalance = document.getElementById('available-balance');
     const intAvailableBalance = parseInt(availableBalance.innerText);
+
+    const bankPin = '1234';
+    const bankPinNumber = document.getElementById('bank-pin-number').value;
+    
+    // Condition
+    if (agentNumber.length !== 11) {
+        return alert('Please provite vaild agent account')
+    }else if (bankPinNumber !== bankPin) {
+        return alert('Please Vaild PIN')
+    }
     
     // Sum 
     const totalBalance = Math.abs(intAmount - intAvailableBalance);
-    
     availableBalance.innerText = totalBalance;
 })
