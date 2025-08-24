@@ -23,6 +23,8 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
+
   <body class="bg-[#f4f5f7] outfit-font min-h-[100vh]">
     <div class="max-w-lg mx-auto bg-white rounded-b-2xl">
       <nav
@@ -32,7 +34,7 @@
           <img src="./assets/Group.png" alt="" class="w-[50px]" />
           <div class="ml-2">
             <h2 class="text-lg font-black">
-              $<span id="available-balance">45000</span>
+              $<span id="available-balance">0</span>
             </h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
@@ -68,7 +70,7 @@
 
           <div class="border-1 border-gray-300 rounded-lg text-center p-3">
             <img src="./assets/money1.png" alt="" class="mx-auto" />
-            <h2 class="mt-2 text-sm font-normal">Transfer Money</h2>
+            <h2 class="mt-2 text-[12px] lg:text-sm font-normal">Transfer Money</h2>
           </div>
 
           <div class="border-1 border-gray-300 rounded-lg text-center p-3">
@@ -152,10 +154,11 @@
         <h2 class="text-xl font-bold mb-3">Cash Out</h2>
 
         <form action="" class="bg-white p-5 rounded-3xl">
+
           <div class="mt-4">
             <label class="font-semibold">Agent Number</label>
             <input
-              id="bank-account-number"
+              id="agent-account-number"
               type="text"
               placeholder="Enter 11 digit number"
               class="input w-full focus:outline-0 bg-[#f4f5f7] border-0 rounded-2xl mt-2"
@@ -165,7 +168,7 @@
           <div class="mt-4">
             <label class="font-semibold">Amount</label>
             <input
-              id="bank-account-number"
+              id="amount-number"
               type="text"
               placeholder="Enter amount to withdraw"
               class="input w-full focus:outline-0 bg-[#f4f5f7] border-0 rounded-2xl mt-2"
@@ -175,7 +178,7 @@
           <div class="mt-4">
             <label class="font-semibold">Pin Number</label>
             <input
-              id="bank-account-number"
+              id="bank-pin-number"
               type="text"
               placeholder="Enter 4 digit pin number"
               class="input w-full focus:outline-0 bg-[#f4f5f7] border-0 rounded-2xl mt-2"
@@ -183,11 +186,12 @@
           </div>
 
           <button
-            id="btn-add-money"
+            id="btn-withdrow-money"
             class="btn mt-4 w-full rounded-2xl text-white font-bold bg-[#0874F2]"
           >
             Withdraw Money
           </button>
+
         </form>
       </div>
 
