@@ -4,7 +4,8 @@ btnElment.addEventListener('click', function (e) {
     e.preventDefault();
     
     // fixed Number & pin
-    const mobileNumber = 11111111111;
+    const mobileNumber = '01300142072';
+    const mobileNumberConvarted = parseInt(mobileNumber);
     const pinNumber = 1234;
 
     // User data
@@ -16,9 +17,9 @@ btnElment.addEventListener('click', function (e) {
     const userPinConverted = parseInt(userPin);
 
     // Condition Checked
-    if (userNumberConverted === mobileNumber && userPinConverted === pinNumber) {
-        confirm('Right Credential✅')
+    if (userNumberConverted === mobileNumberConvarted && userPinConverted === pinNumber) {
+        window.location.href = './home.html'
     }else {
-        confirm('Wrong Credential❌')
+        alert('Wrong Credential❌');
     }
 })
